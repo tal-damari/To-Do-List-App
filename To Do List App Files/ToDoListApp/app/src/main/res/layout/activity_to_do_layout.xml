@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/img_1"
+    tools:context=".to_do_layout">
+
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="To Do List"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:typeface="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/AddButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615"></TextView>
+
+    <Button
+        android:id="@+id/AddButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_shape"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="+"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/list_itemView"
+        app:layout_constraintStart_toStartOf="parent"></Button>
+
+    <EditText
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:hint="Name of What To Do"
+        android:textColorHint="@color/black"
+        android:id="@+id/EditString"
+        app:layout_constraintBottom_toTopOf="@+id/list_itemView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toEndOf="@+id/AddButton"></EditText>
+
+    <ListView
+        android:id="@+id/list_itemView"
+        android:layout_width="389dp"
+        android:layout_height="382dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </ListView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
